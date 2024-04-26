@@ -19,9 +19,9 @@ pink_morsels_df = df.loc[df["product"].str.contains("pink")]
 
 pink_morsels_df["sales"] = (
     pink_morsels_df["price"]
-    .apply(lambda x: x.replace("$", "").replace(",", "") if isinstance(x, str)
-           else x)
-    .astype(float)) * (pink_morsels_df["quantity"])
+    .apply(lambda x: x.replace("$", "").replace(",", "") if isinstance(x, str) else x)
+    .astype(float)
+) * (pink_morsels_df["quantity"])
 
 
 cols = list(pink_morsels_df.columns.values)
